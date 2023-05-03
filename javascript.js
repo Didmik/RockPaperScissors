@@ -1,6 +1,6 @@
 
 
-
+// Random choice by the computer
 function getComputerChoice() {
   const randomWords = ["rock", "paper", "scissors"];
   let choice = "";
@@ -14,7 +14,7 @@ function getComputerChoice() {
 //console.log(getComputerChoice());
 
 
-
+// Plays a round of the game
 function playRound(playerSelection, computerSelection) {
 
 computerSelection = getComputerChoice();
@@ -50,17 +50,37 @@ else {
 }
 
 
-//console.log(playRound("Paper"));
+
+// Testing - console.log(playRound("Paper"));
+
+// Making buttons
+let rockButton = document.querySelector(".rock");
+let paperButton = document.querySelector(".paper");
+let scissorsButton = document.querySelector(".scissors");
+
+rockButton.addEventListener("click", () => { 
+  console.log(playRound("rock"));
+});
+
+paperButton.addEventListener("click", () => { 
+  console.log(playRound("paper"));
+});
+
+scissorsButton.addEventListener("click", () => { 
+  console.log(playRound("scissors"));
+});
 
 
+
+// Plays 5 rounds of the game
 function game() {
   /*for (let i = 1; i <= 5; i++) {
     
   } */
 
   
-
- let message = prompt("choose Rock, Paper or Scissors")
+//trying the game with prompt input
+ /*let message = prompt("choose Rock, Paper or Scissors")
 
   if (message.toLowerCase() === "rock") {
     return playRound("rock");
@@ -72,10 +92,20 @@ function game() {
 
   else if (message.toLowerCase() === "scissors") {
     return playRound("scissors");
-  }
+  } */
+
+
+  let rockButton = document.querySelector(".rock");
+  const paperButton = document.querySelector(".paper");
+  const scissorButton = document.querySelector(".scissors");
+
+  rockButton.addEventListener("click", () => { 
+    playRound();
+    console.log(playRound);
+  });
 
 }
 
 
-console.log(game());
+//console.log(game());
 
